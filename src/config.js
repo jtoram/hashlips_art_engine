@@ -5,8 +5,8 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
+const namePrefix = "My Test Collection";
+const description = "This is my test collection";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
@@ -24,7 +24,7 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 10,
     layersOrder: [
       { name: "Background" },
       { name: "Eyeball" },
@@ -39,12 +39,12 @@ const layerConfigurations = [
 
 const shuffleLayerConfigurations = false;
 
-const debugLogs = false;
+const debugLogs = true;
 
 const format = {
   width: 512,
   height: 512,
-  smoothing: false,
+  smoothing: true,
 };
 
 const gif = {
@@ -68,17 +68,19 @@ const text = {
 };
 
 const pixelFormat = {
-  ratio: 2 / 128,
+  ratio: 10 / 128,
 };
 
 const background = {
   generate: true,
   brightness: "80%",
-  static: false,
+  static: true,
   default: "#000000",
 };
 
-const extraMetadata = {};
+const extraMetadata = {
+  author: "jtoram"
+};
 
 const rarityDelimiter = "#";
 
